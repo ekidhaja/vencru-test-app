@@ -31,6 +31,52 @@ const BillingTab = () => {
         }
     ];
 
+    const tableData = {
+        heading: ["invoice", "amount", "date", "status", "Users on plan", ""],
+        data: [
+            {
+                invoice: "Basic Plan - Dec 2022",
+                amount: 10.00,
+                date: "Dec 1, 2022",
+                status: "paid",
+                users: ["./images/avatar.png", "./images/avatar2.png", "./images/avatar3.png", "./images/avatar4.png", "./images/avatar5.png", "", ""],
+                icon: getIcon("download") as JSX.Element
+            },
+            {
+                invoice: "Basic Plan - Dec 2022",
+                amount: 10.00,
+                date: "Dec 1, 2022",
+                status: "paid",
+                users: ["./images/avatar.png", "./images/avatar2.png", "./images/avatar3.png", "./images/avatar4.png", "./images/avatar5.png", ""],
+                icon: getIcon("download") as JSX.Element
+            },
+            {
+                invoice: "Basic Plan - Dec 2022",
+                amount: 10.00,
+                date: "Dec 1, 2022",
+                status: "paid",
+                users: ["./images/avatar.png", "./images/avatar2.png", "./images/avatar3.png", "./images/avatar4.png", "./images/avatar5.png"],
+                icon: getIcon("download") as JSX.Element
+            },
+            {
+                invoice: "Basic Plan - Dec 2022",
+                amount: 10.00,
+                date: "Dec 1, 2022",
+                status: "paid",
+                users: ["./images/avatar.png", "./images/avatar2.png", "./images/avatar3.png", "./images/avatar4.png"],
+                icon: getIcon("download") as JSX.Element
+            },
+            {
+                invoice: "Basic Plan - Dec 2022",
+                amount: 10.00,
+                date: "Dec 1, 2022",
+                status: "paid",
+                users: ["./images/avatar.png", "./images/avatar2.png", "./images/avatar3.png"],
+                icon: getIcon("download") as JSX.Element
+            }
+        ]
+    }
+
 
     return (
         <div className="space-y-5">
@@ -88,7 +134,7 @@ const BillingTab = () => {
                     </button>
                 </div>
                 <div className="">
-                    <Table />
+                    <Table tableData={tableData} />
                 </div>
             </div>
         </div>

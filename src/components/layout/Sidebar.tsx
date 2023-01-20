@@ -63,7 +63,7 @@ const Sidebar = () => {
     };
 
     return (
-        <div className="h-full w-1/5 overflow-auto p-4 space-y-6"> 
+        <div className="h-full md:w-1/4 xl:w-1/5 overflow-auto p-4 space-y-6"> 
             <div className="flex items-center space-x-1">
                 <img src="./images/logomark.png" alt="logo" className="w-10 h-10" />
                 <h1 className="text-xl font-medium">Untitled UI</h1>

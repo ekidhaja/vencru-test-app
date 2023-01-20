@@ -9,3 +9,12 @@ export interface NavItem {
     path: string;
     data?: number
 }
+
+export interface TableData {
+    invoice: string;
+    amount: number;
+    date: string;
+    status: string;
+    users: string[];
+    icon: JSX.Element
+}
