@@ -11,7 +11,7 @@ import Support from "../../views/Support";
 
 const Content = () => {
     return (
-        <div className="h-full md:w-3/4 xl:w-4/5 px-4 md:px-8 py-10 bg-[#F9FAFB] overflow-y-auto overflow-x-hidden">
+        <div className="h-full md:w-3/4 xl:w-4/5 px-4 pb-20 py-10 md:px-8 md:pb-10 bg-[#F9FAFB] overflow-y-auto overflow-x-hidden">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
