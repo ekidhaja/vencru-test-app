@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { searchBox, upperLinks, lowerLinks, user } from "../../fixtures";
 import TextBox from "../general/TextBox";
 import NavLinks from "./NavLinks";
 import { getIcon } from "../../utils";
+import { MenuContext } from "../../contexts/MenuContext";
 
-interface Props {
-    display: boolean;
-}
+const MobileNav: React.FC = () => {
+    const { display } = useContext(MenuContext);
 
-const MobileNav: React.FC<Props> = ({ display }) => {
     return (
         <div className={`${display ? 'block' : 'hidden'} h-full pb-24 overflow-y-auto p-4 space-y-6`}>
             <div>

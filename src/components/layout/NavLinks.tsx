@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { NavItem } from "../../typings";
+import { MenuContext } from "../../contexts/MenuContext";
 
 interface Props {
     navLinks: NavItem[];
 }
 
 const NavLinks: React.FC<Props> = ({ navLinks}) => {
+    const { setDisplay } = useContext(MenuContext);
+
     return (
         <div className="space-y-2">
         {navLinks.map((navLink, index) => (
@@ -15,6 +18,7 @@ const NavLinks: React.FC<Props> = ({ navLinks}) => {
                 key={index} 
                 className="flex justify-between items-center p-2 hover:bg-[#F9FAFB]"
                 style={({ isActive }) => ({ background: isActive ? "#F9FAFB" : "" })}
+                onClick={() => setDisplay(false)}
             >
                 <div className="flex items-center space-x-4">
                     <i className="w-[17px] h-[17px]">{navLink.icon}</i>

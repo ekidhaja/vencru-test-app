@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { getIcon } from "../../utils";
+import { MenuContext } from "../../contexts/MenuContext";
 
-interface Props {
-    display: boolean;
-    setDisplay: React.Dispatch<React.SetStateAction<boolean>>;
-}
+const Header: React.FC = () => {
+    const { display, setDisplay } = useContext(MenuContext);
 
-const Header: React.FC<Props> = ({ display, setDisplay }) => {
     return (
         <div className="flex justify-between items-center">
             <div className="flex items-center space-x-1 p-4 md:p-0">
