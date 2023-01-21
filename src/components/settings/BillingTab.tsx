@@ -84,12 +84,12 @@ const BillingTab = () => {
                 <h1 className="text-xl font-medium capitalize">payment method</h1>
                 <span className="text-md text-gray-500">Update your billing details and address.</span>
             </div>
-            <div className="flex space-x-10 border-t py-6">
-                <div className="w-[25%]">
+            <div className="space-y-5 md:space-y-0 md:flex md:space-x-10 border-t py-6">
+                <div className="md:w-[25%]">
                     <h3 className="text-md font-medium capitalize">contact email</h3>
                     <span className="text-md text-gray-500">Where should invoices be sent?</span>
                 </div>
-                <div className="space-y-4 w-[60%]">
+                <div className="space-y-4 md:w-[60%]">
                     <div>
                         <div className="flex space-x-2">
                             <input type="radio" name="radio" checked />
@@ -108,13 +108,13 @@ const BillingTab = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex space-x-10 border-t py-6">
-                <div className="w-[25%]">
+            <div className="space-y-5 md:space-y-0 md:flex md:space-x-10 border-t py-6">
+                <div className="md:w-[25%]">
                     <h3 className="text-md font-medium capitalize">card details</h3>
                     <span className="text-md text-gray-500">Select default payment method.</span>
                 </div>
-                <div className="w-[75%] space-y-6">
-                    {cardDetails.map((details, index) => (
+                <div className=" md:w-[75%] space-y-6">
+                    {cardDetails.map((details) => (
                         <div key={details.id} onClick={() => setChecked(details.id)}>
                             <CardDetails details={details} checked={checked} />
                         </div>
@@ -126,14 +126,14 @@ const BillingTab = () => {
                 </div>
             </div>
             <div className="space-y-8">
-                <div className="flex justify-between items-center mt-2">
+                <div className="space-y-4 md:space-y-0 md:flex md:justify-between md:items-center mt-2">
                     <h1 className="text-xl text-gray-900 font-medium">Billing history</h1>
                     <button className="flex items-center space-x-2 border rounded-lg p-2.5 bg-white">
                         <i>{getIcon("download")}</i>
                         <span className="text-sm text-gray-600 font-medium">Download all</span>
                     </button>
                 </div>
-                <div className="">
+                <div className="overflow-x-auto">
                     <Table tableData={tableData} />
                 </div>
             </div>

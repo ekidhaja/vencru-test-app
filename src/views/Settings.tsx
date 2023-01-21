@@ -22,7 +22,7 @@ const Settings = () => {
                 <h1 className="capitalize text-3xl font-medium text-gray-800">settings</h1>
                 <span className="text-lg text-gray-500">Manage your team and preferences here.</span>
             </div>
-            <div>
+            <div className="">
                 <Tab tabContent={tabContent} active={active} />
             </div>
         </div>

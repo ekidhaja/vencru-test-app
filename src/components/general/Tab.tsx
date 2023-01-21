@@ -14,21 +14,31 @@ const Tab: React.FC<Props> = ({ tabContent, active}) => {
 
     return (
         <div> 
-            <ul className="flex xl:w-[75%] px-1 border border-gray-400 rounded-lg bg-[white] overflow-x-auto">
-                {Object.keys(tabContent).map((tab, index) => (
-                    <li 
-                        key={tab}
-                        className="py-2.5 px-4 cursor-pointer text-sm font-medium hover:bg-[#F9FAFB] capitalize"
-                        onClick={() => changeTab(tab)}
-                        style={{ 
-                            background: activeTab === tab ? "#F9FAFB" : "", 
-                            borderRight: (index + 1) === count ? "" : "1px solid #ddd" 
-                        }}
-                    >
-                        {tab}
-                    </li>
-                ))}
-            </ul>
+            <div 
+                className="-mx-4 md:-mx-10 lg:mx-0 bg-white border 
+                lg:w-full xl:w-[75%] lg:rounded-xl overflow-x-auto"
+            >
+                <table className="cursor-pointer w-[700px] lg:w-full">
+                    <thead>
+                        <tr>
+                        {Object.keys(tabContent).map((tab, index) => (
+                            <td 
+                                key={tab}
+                                className="py-2 px-2 md:py-2.5 md:px-2.5 xl:px-4 
+                                text-sm font-medium hover:bg-[#F9FAFB] capitalize"
+                                onClick={() => changeTab(tab)}
+                                style={{ 
+                                    background: activeTab === tab ? "#F9FAFB" : "", 
+                                    borderRight: (index + 1) === count ? "" : "1px solid #ddd"
+                                }}
+                            >
+                                {tab}
+                            </td>
+                        ))}
+                        </tr>
+                    </thead>
+                </table>
+            </div>
             <div className="py-6">
                 {tabContent[activeTab]}
             </div>
